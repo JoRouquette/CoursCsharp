@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace _5
 {
-    class Program
+    enum Races
     {
-        static void Main(string[] args)
-        {
-
-        }
+        Caniche,
+        Bouledogue
     }
 }
