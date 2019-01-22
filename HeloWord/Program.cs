@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HeloWord
+namespace _1._1
 {
     class Program
     {
