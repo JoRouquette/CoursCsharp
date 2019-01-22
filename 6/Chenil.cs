@@ -25,5 +25,13 @@ namespace _5
                 Console.WriteLine($"{pChien.Name}, de race {pChien.Race}");
             }
         }
+
+        public void ListeRace()
+        {
+            foreach (Chien pChien in Chiens)
+            {
+                Console.WriteLine($"Race {pChien.Race}");
+            }
+        }           
     }
 }

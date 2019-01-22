@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace _7
+namespace _7._1
 {
     class Rectangle
     {
@@ -11,18 +9,18 @@ namespace _7
 
         public decimal Perimetter
         {
-            get { return (2 * (Width + Length)); }
+            get { return Math.Round((2 * (Width + Length)), 2); }
         }
         public decimal Area
         {
-            get { return (Width * Length); }
+            get { return Math.Round((Width * Length), 2); }
         }
 
         public string Affichage
         {
             get
             {
-                return $"Le rectangle Lx {Length} lx {Width} à un périmètre de : {Perimetter}, et une aire de : {Area}.";
+                return $"Le rectangle Lx({Length}) et lx({Width}) à un périmètre de : {Perimetter}, et une aire de : {Area}.";
             }
         }
 
