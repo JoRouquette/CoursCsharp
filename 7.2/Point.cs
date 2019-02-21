@@ -7,21 +7,21 @@ namespace _7._2
     class Point
     {
         #region attribut 
-        private int x { get; set; }
-        private int y { get; set; }
+        private double X { get; set; }
+        private double Y { get; set; }
         #endregion
 
         #region Constructeurs
         public Point()
         {
-            x = 0;
-            y = 0;
+            X = 0;
+            Y = 0;
         }
 
-        public Point(int pX, int pY)
+        public Point(double pX, double pY)
         {
-            x = pX;
-            y = pY;
+            X = pX;
+            Y = pY;
         }
         #endregion
 
@@ -32,7 +32,29 @@ namespace _7._2
             - Une fonction membre milieu donnant le Point au milieu d'un segment
         */
         #region Methodes
+        public double Distance(Point pPointB) => Math.Round(Math.Sqrt(Math.Pow((pPointB.X - X), 2) + Math.Pow((pPointB.Y - Y), 2)), 3);
 
+        public void Deplace(double pTranslate)
+        {
+            double tamponX = X;
+            double tamponY = Y;
+            X = tamponX + pTranslate;
+            Y = tamponY + pTranslate;
+        }
+        public string Affiche
+        {
+            get { return $"P({X} ; {Y})"; }
+        }
+        
+
+        public Point Milieu(Point pPointB)
+        {
+            Point milieuSegment;
+            double pXmilieu = Math.Round((X + pPointB.X) / 2, 2);
+            double pYmilieu = Math.Round((Y + pPointB.Y) / 2, 2);
+            milieuSegment = new Point(pXmilieu, pYmilieu);
+            return milieuSegment;
+        }
         #endregion
     }
 }
